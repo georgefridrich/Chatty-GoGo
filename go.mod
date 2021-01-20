@@ -2,9 +2,9 @@ module Chatty-GoGo
 
 go 1.15
 
-replace mygithub.com/Logic => /Logic
+replace mygithub.com/Logic => ./Logic
 
-replace mygithub.com/Routes => /Routes
+replace mygithub.com/Routes => ./Routes
 
 require (
 	github.com/gin-gonic/gin v1.6.3 // indirect
