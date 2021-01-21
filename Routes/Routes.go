@@ -2,12 +2,16 @@ package Routes
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/gin-gonic/contrib/static"
 	"mygithub.com/Logic"
 )
 
 func HandleCRUD() {
 	// Use the default router in Gin
 	router := gin.Default()
+
+	// Set homepage to serve up our React UI based Welcome page
+	router.Use(static.Serve("/", static.LocalFile("./Presentation", true)))
 
 	///////////////////////////////////////////////////////////////
 	// Below are all of the endpoints we'll need for Chatty-GoGo //
